@@ -1,0 +1,28 @@
+# Environment Variables
+.env
+
+# mounted volume
+sites
+
+# development/*
+development/frappe-bench/env/
+!development/README.md
+!development/installer.py
+!development/apps-example.json
+!development/vscode-example/
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/**
+!.vscode/extensions.json
+
+# VS Code devcontainer
+.devcontainer
+*.code-workspace
+
+# Python
+*.pyc
+__pycache__
+venv

@@ -1,0 +1,42 @@
+2023-12-07 08:06:34,888 DEBUG cd frappe-bench && python3 -m venv env
+2023-12-07 08:08:33,492 DEBUG cd frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2023-12-07 08:12:49,248 DEBUG cd frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet wheel
+2023-12-07 08:13:16,243 LOG Getting frappe
+2023-12-07 08:13:16,244 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2023-12-07 08:14:35,597 LOG Installing frappe
+2023-12-07 08:14:35,611 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/frappe 
+2023-12-07 08:36:58,177 DEBUG cd /workspace/development/frappe-bench/apps/frappe && yarn install
+2023-12-07 08:43:06,418 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-07 08:43:06,419 DEBUG cd frappe-bench && bench build
+2023-12-07 08:43:06,783 INFO /home/frappe/.local/bin/bench build
+2023-12-07 08:47:46,112 LOG setting up backups
+2023-12-07 08:47:46,154 LOG backups were set up
+2023-12-07 08:47:46,155 INFO Bench frappe-bench initialized
+2023-12-07 08:47:46,687 INFO A newer version of bench is available: 5.17.2 → 5.19.0
+2023-12-07 08:52:18,780 INFO /home/frappe/.local/bin/bench set-config -g db_host mariadb
+2023-12-07 08:54:01,842 INFO /home/frappe/.local/bin/bench set-config -g redis_cache redis://redis-cache:6379
+2023-12-07 08:57:05,244 INFO /home/frappe/.local/bin/bench set-config -g redis_queue redis://redis-queue:6379
+2023-12-07 08:59:48,226 INFO /home/frappe/.local/bin/bench set-config -g redis_socketio redis://redis-queue:6379
+2023-12-07 09:04:03,220 INFO /home/frappe/.local/bin/bench new-site --no-mariadb-socket development.localhost
+2023-12-07 09:11:58,153 INFO /home/frappe/.local/bin/bench --site development.localhost set-config developer_mode 1
+2023-12-07 09:13:50,132 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2023-12-07 09:17:14,925 INFO /home/frappe/.local/bin/bench get-app --branch version-15 --resolve-deps erpnext
+2023-12-07 09:17:16,237 LOG Getting erpnext
+2023-12-07 09:17:16,238 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2023-12-07 09:19:03,434 LOG Installing erpnext
+2023-12-07 09:20:52,340 DEBUG cd /workspace/development/frappe-bench && /workspace/development/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/erpnext 
+2023-12-07 09:29:48,554 DEBUG cd /workspace/development/frappe-bench/apps/erpnext && yarn install
+2023-12-07 09:29:51,272 DEBUG bench build --app erpnext
+2023-12-07 09:29:51,921 INFO /home/frappe/.local/bin/bench build --app erpnext
+2023-12-07 09:32:29,274 WARNING bench build --app erpnext executed with exit code 1
+2023-12-07 09:32:29,275 WARNING /home/frappe/.local/bin/bench get-app --branch version-15 --resolve-deps erpnext executed with exit code 1
+2023-12-07 09:32:29,542 INFO A newer version of bench is available: 5.17.2 → 5.19.0
+2023-12-07 09:34:26,966 INFO /home/frappe/.local/bin/bench use v18
+2023-12-07 09:34:43,937 INFO /home/frappe/.local/bin/bench get-app --branch version-15 --resolve-deps erpnext
+2023-12-07 09:35:04,068 INFO A newer version of bench is available: 5.17.2 → 5.19.0
+2023-12-07 09:35:45,116 INFO /home/frappe/.local/bin/bench --site development.localhost install-app erpnext
+2023-12-07 09:47:13,631 INFO /home/frappe/.local/bin/bench start
+2023-12-07 09:47:14,530 INFO /home/frappe/.local/bin/bench watch
+2023-12-07 09:47:14,530 INFO /home/frappe/.local/bin/bench schedule
+2023-12-07 09:47:14,597 INFO /home/frappe/.local/bin/bench serve --port 8000
+2023-12-07 09:47:14,708 INFO /home/frappe/.local/bin/bench worker
