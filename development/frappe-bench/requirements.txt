@@ -1,0 +1,22 @@
+certifi==2023.7.22
+charset-normalizer==3.3.0
+click==8.1.7
+distlib==0.3.7
+filelock==3.12.4
+-e git+https://github.com/frappe/bench@acbceb8f96553867aebcc1d311da45e5653b3451#egg=frappe_bench
+gitdb==4.0.10
+GitPython==3.1.37
+honcho==1.1.0
+idna==3.4
+Jinja2==3.0.3
+MarkupSafe==2.1.3
+platformdirs==3.11.0
+python-crontab==2.6.0
+python-dateutil==2.8.2
+requests==2.31.0
+semantic-version==2.8.5
+six==1.16.0
+smmap==5.0.1
+tomli==2.0.1
+urllib3==2.0.6
+virtualenv==20.24.5
